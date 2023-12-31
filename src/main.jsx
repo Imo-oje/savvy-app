@@ -11,20 +11,18 @@ const router = createBrowserRouter([
   {
     path: "/savvy-app/",
     element: <App />,
-    children: [
-      {
-        path: "/savvy-app/",
-        element: <Home />,
-      },
-      {
-        path: "/savvy-app/login",
-        element: <Login />,
-      },
-      {
-        path: "/savvy-app/register",
-        element: <Register />,
-      },
-    ],
+  },
+  {
+    path: "/savvy-app/",
+    element: <Home />,
+  },
+  {
+    path: "/savvy-app/login",
+    element: <Login />,
+  },
+  {
+    path: "/savvy-app/register",
+    element: <Register />,
   },
 ]);
 
