@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,46 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* VARIALES */
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --side-padding: 1rem;
+  --top-padding: 2rem;
+
+  --primary: rgb(229, 194, 50);
+  --test: 1px solid red;
+  --background-color: #242424;
+
+  --icon-text: 3px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background-color);
+  color: #fff;
+  font-family: var(--font-family);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
