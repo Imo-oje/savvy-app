@@ -53,15 +53,6 @@
 
     li {
       font-size: 14px;
-      &.register-btn {
-        padding: 4px 8px;
-        border-radius: 10px;
-        background: var(--primary);
-        a {
-          color: var(--background-color);
-        }
-      }
-
       &.register-btn:hover {
         opacity: 80%;
       }
@@ -75,7 +66,17 @@
   }
 }
 
-.navbar input#nav-check {
+li.register-btn {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: var(--primary);
+  a {
+    color: var(--background-color);
+  }
+}
+
+.navbar input#nav-check,
+.login-register-btn-labels {
   display: none;
 }
 
@@ -109,4 +110,23 @@
       display: none;
     }
   }
+
+  .login-register-btn-labels {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+  }
+
+  /* THIS BUTTON STYLES WILL BE UPDATED LATER */
+  li.login-btn {
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: var(--primary);
+    a {
+      color: var(--background-color);
+    }
+  }
+  /* === == = == === */
 }

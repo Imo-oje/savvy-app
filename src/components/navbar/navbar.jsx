@@ -71,13 +71,29 @@ function Navbar() {
             <a href="">More</a>
             <RiArrowDropDownLine />
           </li>
+          <div className="login-register-btn-labels">
+            <label htmlFor="login-btn">
+              <li className="login-btn">
+                <Link to="login">Log In</Link>
+              </li>
+            </label>
+
+            <label htmlFor="reister-btn">
+              <li className="register-btn">
+                <Link to="register" href="register">
+                  <IoMdRose />
+                  Register
+                </Link>
+              </li>
+            </label>
+          </div>
         </ul>
 
         <ul className="user-action">
-          <li className="login-btn">
+          <li id="login-btn" className="login-btn">
             <Link to="login">Log In</Link>
           </li>
-          <li className="register-btn">
+          <li id="register" className="register-btn">
             <Link to="register" href="register">
               <IoMdRose />
               Register
