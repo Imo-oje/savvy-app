@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  padding: var(--side-padding) var(--top-padding);
+  padding: var(--top-padding) var(--side-padding);
   position: sticky;
   a {
     padding: 4px 8px;
@@ -94,6 +94,7 @@ li.register-btn {
     width: 80%;
     min-height: 80vh;
     transform: translateX(-50%);
+    background: #333;
 
     li {
       white-space: nowrap;

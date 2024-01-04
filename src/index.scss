@@ -79,8 +79,8 @@ button:focus-visible {
   line-height: 1.5;
   font-weight: 400;
 
-  --side-padding: 1rem;
-  --top-padding: 2rem;
+  --side-padding: 0.5rem;
+  --top-padding: 0.5rem;
 
   --primary: rgb(229, 194, 50);
   --test: 1px solid red;
@@ -107,4 +107,13 @@ ul li {
 
 a {
   text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  outline: none;
+  border: none;
 }

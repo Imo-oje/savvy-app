@@ -9,20 +9,26 @@ import Home from "./pages/home/home.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/savvy-app/",
+    path: "savvy-app",
     element: <App />,
   },
   {
-    path: "/savvy-app/",
+    path: "savvy-app",
     element: <Home />,
   },
   {
-    path: "/savvy-app/login",
+    path: "savvy-app/login",
     element: <Login />,
   },
   {
-    path: "/savvy-app/register",
+    path: "savvy-app/register",
     element: <Register />,
+    children: [
+      {
+        path: "login",
+        element: <Login />,
+      },
+    ],
   },
 ]);
 
