@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 999999;
+  background: var(--background-color);
 
   color: #fff;
   padding: var(--top-padding) var(--side-padding);
