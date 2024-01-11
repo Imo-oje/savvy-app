@@ -7,13 +7,13 @@
 }
 
 .register h1 {
-  line-height: 1.2;
-  font-size: 48px;
+  line-height: 1.1;
+  font-size: 45px;
   margin-bottom: 10px;
 }
 
 .register h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -44,7 +44,6 @@ input {
   width: 100%;
   height: 30px;
   border: none;
-  border-radius: 5px;
   padding: 15px;
   color: #fff;
 }
@@ -78,26 +77,20 @@ li.create-account-btn {
   }
 
   .register {
-    /* display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: var(--top-padding) var(--side-padding); */
     all: unset;
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: center;
     position: absolute;
-    top: 45%;
+    top: 35%;
     transform: translateY(-40%);
     width: 100%;
   }
 
   form {
-    width: 100%;
+    width: 90%;
     text-align: left;
   }
 }
