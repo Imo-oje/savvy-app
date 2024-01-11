@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   color: #fff;
   padding: var(--top-padding) var(--side-padding);
   position: sticky;
@@ -95,8 +96,8 @@ li.register-btn {
     left: 50%;
     width: 80%;
     min-height: 80vh;
-    transform: translateX(-50%);
     background: #333;
+    transform: translateX(-50%);
 
     li {
       white-space: nowrap;

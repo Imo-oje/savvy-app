@@ -1,24 +1,43 @@
 .register {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: var(--top-padding) var(--side-padding);
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
 }
+
 .register h1 {
-  line-height: 1;
+  line-height: 1.2;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.register h2 {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .register form input {
   display: block;
 }
 
+.register small {
+  font-size: 18px;
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}
+
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
+  max-width: 450px;
   white-space: nowrap;
+  margin-top: 20px;
 }
 
 input {
@@ -27,51 +46,58 @@ input {
   border: none;
   border-radius: 5px;
   padding: 15px;
+  color: #fff;
 }
 
-.password {
-  max-width: 600px;
-  display: flex;
-  gap: 10px;
+input#email,
+input#fullName {
+  background-color: transparent;
+  border-bottom: 2px solid var(--primary);
 }
 
-.register form .button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+li.create-account-btn a {
+  /* Create Account Button */
+  color: var(--background-color);
+  font-weight: 600;
 }
 
-button {
-  padding: 8px 16px;
-  border-radius: 5px;
-  margin-top: 1rem;
+li.create-account-btn {
+  /* Create Account Button */
+  background-color: var(--primary);
+  padding: var(--btn-padding);
+  text-align: center;
+  margin-top: 20px;
   cursor: pointer;
 }
 
-@media screen and (width >= 1024px) {
+@media screen and (width <= 1024px) {
+  .register-page {
+    padding: var(--top-padding) var(--side-padding);
+    width: 100vw;
+    height: 100vh;
+  }
+
   .register {
-    align-items: flex-start;
+    /* display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: var(--top-padding) var(--side-padding); */
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    top: 45%;
+    transform: translateY(-40%);
+    width: 100%;
   }
 
-  .register h2 {
-    font-size: 19px;
-  }
-
-  .register h1 {
-    font-size: 46px;
-    margin-bottom: 10px;
-  }
-
-  .register small {
-    font-size: 16px;
-    a {
-      color: var(--primary);
-      text-decoration: underline;
-      font-weight: 600;
-    }
+  form {
+    width: 100%;
+    text-align: left;
   }
 }

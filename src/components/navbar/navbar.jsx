@@ -62,12 +62,13 @@ function Navbar() {
             </label>
 
             <label htmlFor="reister-btn">
-              <li className="register-btn">
-                <Link to="register" href="register">
-                  <IoMdRose />
-                  Register
-                </Link>
-              </li>
+              <Button
+                id="register"
+                name="Register"
+                icon={<IoMdRose />}
+                url="register"
+                className="register-btn"
+              />
             </label>
           </div>
         </ul>
