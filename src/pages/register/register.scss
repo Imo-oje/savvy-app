@@ -6,6 +6,9 @@
   gap: 2rem;
   padding: var(--top-padding) var(--side-padding);
 }
+.register h1 {
+  line-height: 1;
+}
 
 .register form input {
   display: block;
@@ -23,6 +26,7 @@ input {
   height: 30px;
   border: none;
   border-radius: 5px;
+  padding: 15px;
 }
 
 .password {
@@ -59,7 +63,6 @@ button {
 
   .register h1 {
     font-size: 46px;
-    line-height: 1;
     margin-bottom: 10px;
   }
 

@@ -4,42 +4,25 @@ import { SiBinance } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoMdRose } from "react-icons/io";
 import { GrLanguage } from "react-icons/gr";
-import { IoMenu } from "react-icons/io5";
+import { IoClose, IoMenu } from "react-icons/io5";
 import "./navbar.scss";
+import Button from "../button/button";
+import useScreenSize from "../../utils/use";
 
 function Navbar() {
   let LogoIconStyles = { color: "#E5C232", fontSize: "1.5em" };
 
-  function useScreenSize() {
-    const [screenSize, setScreenSize] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-
-    useEffect(() => {
-      const handleSize = () => {
-        setScreenSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-
-      window.addEventListener("resize", handleSize);
-      return () => {
-        window.removeEventListener("resize", handleSize);
-      };
-    }, []);
-
-    return screenSize;
-  }
-
   const screenSize = useScreenSize();
+
+  const [button, setButton] = useState(true);
+
+  function toggleBtn() {
+    setButton((prevButton) => !prevButton);
+  }
 
   const selectByScreenSize =
     screenSize.width <= 1024 ? (
-      <label htmlFor="nav-check">
-        <IoMenu />
-      </label>
+      <label htmlFor="nav-check">{button ? <IoMenu /> : <IoClose />}</label>
     ) : (
       <GrLanguage />
     );
@@ -93,13 +76,16 @@ function Navbar() {
           <li id="login-btn" className="login-btn">
             <Link to="login">Log In</Link>
           </li>
-          <li id="register" className="register-btn">
-            <Link to="register" href="register">
-              <IoMdRose />
-              Register
-            </Link>
+          <Button
+            id="register"
+            name="Register"
+            icon={<IoMdRose />}
+            url="register"
+            className="register-btn"
+          />
+          <li onClick={toggleBtn} className="menu-btn">
+            {selectByScreenSize}
           </li>
-          <li className="lang-btn menu-btn">{selectByScreenSize}</li>
         </ul>
       </nav>
     </>

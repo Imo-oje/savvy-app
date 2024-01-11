@@ -1,8 +1,9 @@
 import "./register.scss";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar.jsx";
+import Button from "../../components/button/button.jsx";
 
-function Register() {
+function Register(prop) {
   return (
     <>
       <Navbar />
@@ -40,8 +41,7 @@ function Register() {
             </div>
           </div>
           <div className="button">
-            <button>Reset password</button>
-            <button>Create Account</button>
+            <Button color="red" />
           </div>
         </form>
       </div>
